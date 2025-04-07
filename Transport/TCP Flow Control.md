@@ -1,0 +1,9 @@
+- If network layer is deliver data faster than application layer removing data from socket buffers
+- Anatomy of flow control:
+	- network layer delivers IP datagram payload into TCP socket buffers
+	- application layer removes data from TCP socket buffers
+- Flow control: 
+	- receiver controls the sender, so sender won't overflow receiver's buffer by transmitting too fast
+	- on the TCP packet, we have a header field (receive window) indicating the # of bytes the receiver is willing to accept
+	- TCP receiver "advertises" free buffer space in `rwnd` field in TCP header
+	- the sender limits the amount of unACKed data it can send to the `rwnd` it receives from the receiver

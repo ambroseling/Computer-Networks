@@ -1,0 +1,40 @@
+- no always-on server
+- arbitrary end systems directly communicate
+- peers request service from other peers, provide service in return to other peers
+- intermittently connected and change IP addresses
+- file distribution: 
+	- server transmissions:
+		- time to send 1 copy: $\frac{F}{\mu_s}$
+	- client:
+		- takes $\frac{F}{d_{min}}$ to download
+	- time to distribute $D_{P2P} \ge \{\frac{F}{\mu_s},\frac{F}{d_{min}},\frac{NF}{\mu_s + \sum_{i=1}^{N} \mu_i}\}$
+		- $\frac{NF}{\mu_s + \sum_{i=1}^{N} \mu_i}$: 
+- Locating resources in P2P
+	- Centralized Approach
+		- client looking for resource asks the server
+		- server sends address of peer that has the resource
+		- client looking for resource contacts the peer
+	- Fully Distributed
+		- content can be found by flooding
+		- not efficient in terms of bandwidth
+		- may not find the content
+	- Distributed Hash Table (distributed P2P database)
+		- distributed database and an efficient search algorithm
+		- stores `(key,value)` pairs, key: content type, value: IP address
+		- peers query DB with key, DB returns values that match the key
+		- use an integer to identify each peer in range $[0,2^n - 1]$
+	- Circular DHT
+		- each peer is only aware of immediate successor and predecessor
+		- $O(N)$ messages on avg to resolve query if there are $N$ peers
+		- can introduce shortcuts (each peer keeps track of IP of predecessor, successor and short cuts) $\rightarrow$ $O(log(N))$
+- BitTorrent
+	- file divided into 256Kb chunks
+	- peers in torrent send/receive file chunks
+	- **tracker**: tracks peers participating in torrent
+	- **torrent**: group of peers exchanging chunks of a file
+	- requesting chunks:
+		- at any given time different peers have different subsets of file chunks
+		- periodically asks peers for list of chunks they have
+	-  sending chunks:
+		- peer sends chunks to other peers currently sending her chunks at highest rate
+		- every 30 seconds, randomly select another peer  and start sending chunks

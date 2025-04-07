@@ -1,0 +1,46 @@
+- Software: routing, management of control plane
+- Software defined networking: remote controller computers and installs forwarding tables in routers
+- Hardware: 
+	- MAC / Framer: framing / addressing, error handling with CRC, flow control, encoding / decoding
+	- Network Processor: compression, packet lookup, classification, statistics
+	- Traffic Manager: Queuing, Scheduling, Congestion Control
+- Switch Fabric:
+	- **switching rate:** rate at which packets can be transferred from inputs to outputs
+	- transfer packet from input link to appropriate output link
+	- Switching via Memory: 
+		- packet copied to system's memory, speed is limited by memory bandwidth
+	- Switching via Bus: 
+		- datagram from input port memory to output port memory via a shared bus
+		- bus contention: switching speed is limited by the bus bandwidth
+	- Switching via interconnection Network:
+		- cross bar networks are a way to connect processors together
+		- multistage switch: n x n switch from multiple stages of smaller switches
+		- can exploit parallelism by fragmenting datagram into fixed length cells on entry, switch cells through fabric and reassemble them at exit
+	
+- Input port functions:
+	-   line termination
+	- link layer protocol
+	- look up forwarding , queueing
+	- decentralized switching
+		- destination based forwarding: forward based only on destination IP address, longest prefix matching
+		- generalized forwarding: forward based on any set of header field values
+
+- Input Port Queuing
+	- Head of Line blocking: queued datagram in front of queue prevents others in queue from moving forward
+	- if switch rate < rate at which packets arrive at input ports -> queuing
+- Output Port Queuing
+	- Buffering required when datagrams arrive from fabric faster than link transmission rate
+	- Drop policy: drop datagrams if there is no free buffers, packets can be lost due to congestion
+	- Scheduling discipline
+		- FCFS: packets transmitted in order of arrival to output port
+		- Priority: 1 high pri queue and 1 low pri queue
+			- FCFS within priority class, always send high pri first if queue isnt empty
+		- RR: queued by class, use header fields for classification
+			- server scans class queues in cycles, sends one complete packet from each class in turn
+		- WFQ: class $i$ has weight $W_i$ gets weighted amount of service in each cycle
+			- Minimum guarantee bandwidth: $\frac{W_i \times R}{\sum_j W_j}$
+ - Buffering Rule:
+	 - $\frac{RTT \times C}{N}$ 
+		 - $N$: # of traffic flows, $C$: link capacity, $RTT$: round trip time
+- Forwarding / Routing table:
+	- stores entries with keys (Destination Address Range, Link Interface)

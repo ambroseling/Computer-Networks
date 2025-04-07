@@ -1,0 +1,16 @@
+- network layer above IP: ICMP messages carried in IP datagram
+- ICMP header
+	- 8 byte header
+		- 1st byte -> ICMP type
+		- 2nd byte -> ICMP code
+		- 3rd and 4th byte -> ICMP checksum of entire message
+		- last 4 bytes -> remaining contents may vary
+- only reports errors
+- errors are always sent to original source, only info available in the datagram about route is source and destination address
+- TraceRoute
+	- source sends sets of UDP segments to destination
+	- 1st set has TTL = 1, 2nd set has TTL = 2, 3rd set has TTL = 3
+	- when ICMP message arrives at source we record the RTT
+	- UDP segment eventually 
+	- destination returns ICMP "port unreachable" message (type 3 code 3)
+	- source stops

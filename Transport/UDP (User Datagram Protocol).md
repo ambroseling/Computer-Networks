@@ -1,0 +1,21 @@
+- unreliable data transfer btw sending and receiving process
+- does not provide reliability flow control, congestion control, timing, throughput guarantee, security
+- UDP segments can be lost, delivered out of order to app
+- connectionless: no handshake btw sender and receiver, each UDP segment handled independently of others, no connection state
+- no congestion control: UDP can blast away as fast as desired
+- uses: streaming multimedia apps, DNS, SNMP, HTTP/3
+- if we need reliable transfer over UDP $\rightarrow$ add needed reliability/congestion control at application layer
+- UDP segment header + application data (payload)
+	- source port #
+	- length
+	- dest port #
+	- checksum
+		- used to detect errors in transmitted segments
+		- sender: treat contents of UDP segment as sequence of 16 bit integers
+		- receiver: compute checksum of received segment, if computed = checksum field value (no error), else (error detected)
+		- calculation:
+			- add all 16 bit integers using 1's compliment arithmetic
+			- invert the sum and plug it in header field for checksum
+			- $x = (b_0 + b_1 + b_2 + b_3 + \cdots + b_{L-1})mod 2^{16}-1$
+			- $b_L = - x (mod) 2^{16}-1$
+			- we must satisfy: $0 = b_0 + b_1 + b_2 + \cdots + b_{L-1} (mod 2^{16}-1)$ 

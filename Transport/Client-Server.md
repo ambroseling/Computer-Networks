@@ -1,0 +1,23 @@
+- client: 
+	- has a process that initiates communication
+	- communicates with server
+	- don't communicate with eachother
+- server: 
+	- has a process that waits to be contacted
+	- always-on host
+	- permanent IP address
+	- often in data centers
+- IPC allows 2 processes within same machine communicate
+- IP address + Port numbers 
+- sockets:
+	- processes sends / receives messages to/from its socket
+	- btw application layer and transport layer there is a socket
+	- there is sockets on both sides of processes
+- file distribution
+	- server transmission:
+		- takes $\frac{F}{\mu_s}$ to send 1 copy, $\frac{NF}{\mu_s}$ to send $N$ copies
+	- client:
+		- takes $d_{min}$ client download rate, $\frac{F}{d_{min}}$
+	- time to distribute $F$ to $N$ clients using client-server approach
+		- $D_{cs} = max \{ \frac{NF}{\mu_s}, \frac{F}{d_{min}}\}$
+		- $\frac{F}{d_{min}}$ cuz assume clients download in parallel
