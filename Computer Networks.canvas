@@ -40,7 +40,7 @@
 		{"id":"f22385ff3a8bc025","type":"file","file":"Computer Networks/Transport/TCP Reliable Data Transfer.md","x":-1234,"y":-900,"width":258,"height":75},
 		{"id":"ba59f44cd5b2f5e5","type":"file","file":"Computer Networks/Transport/UDP (User Datagram Protocol).md","x":-785,"y":-570,"width":220,"height":83},
 		{"id":"b77f85515a0a73b1","type":"text","text":"DHCP","x":-362,"y":350,"width":125,"height":60},
-		{"id":"672af1b5a6a9a3b1","type":"file","file":"Computer Networks/Network/DHCP.md","x":-510,"y":460,"width":300,"height":100},
+		{"id":"672af1b5a6a9a3b1","type":"file","file":"Computer Networks/Network/DHCP.md","x":-670,"y":520,"width":300,"height":100},
 		{"id":"fc3581a2a57121a7","type":"text","text":"QUIC","x":-464,"y":-448,"width":100,"height":50},
 		{"id":"95c5a0feb54bed65","type":"file","file":"Computer Networks/Transport/QUIC (Quick UDP Internet Connections).md","x":-460,"y":-570,"width":235,"height":72},
 		{"id":"1103c435454a40a8","type":"text","text":"TCP","x":-950,"y":-448,"width":93,"height":52},
@@ -52,7 +52,6 @@
 		{"id":"f3a1576a27f27b13","type":"file","file":"Computer Networks/Network/IPv6.md","x":1220,"y":100,"width":150,"height":120},
 		{"id":"03d46cb0574b56e0","type":"text","text":"CIDR","x":-10,"y":350,"width":125,"height":60},
 		{"id":"62c6905458ac762d","type":"text","text":"Router Anatomy","x":320,"y":-340,"width":250,"height":60},
-		{"id":"9dfe855f618c5984","type":"file","file":"Computer Networks/Network/Router Anatomy.md","x":683,"y":-420,"width":327,"height":79},
 		{"id":"81ef6ba5cabc28c2","type":"text","text":"Internet Control Message Protocl","x":334,"y":-240,"width":250,"height":60},
 		{"id":"5d28e1b46e9c6f83","type":"file","file":"Computer Networks/Application/Domain Name System.md","x":-1450,"y":75,"width":253,"height":95},
 		{"id":"c374824da2f381c3","type":"text","text":"Domain Name System","x":-1447,"y":-60,"width":250,"height":50},
@@ -69,12 +68,19 @@
 		{"id":"962468c73815fa42","type":"text","text":"Link State Routing","x":1890,"y":520,"width":250,"height":60},
 		{"id":"247494f4781b4a3d","type":"file","file":"Computer Networks/Network/Link State Routing.md","x":1884,"y":734,"width":263,"height":123},
 		{"id":"f1c46e68d9f1e244","type":"file","file":"Computer Networks/Network/Distance Vector.md","x":1404,"y":740,"width":323,"height":117},
-		{"id":"2f22c096f70d1057","type":"text","text":"### Link State (LS) VS Distance Vector (DV)\n\n| **Aspect**               | **Link State (LS)**                                                   | **Distance Vector (DV)**                                       |\n| ------------------------ | --------------------------------------------------------------------- | -------------------------------------------------------------- |\n| **Message Complexity**   | O(n²) messages sent (each router floods to all others)                | Only exchanges with neighbors; fewer messages                  |\n| **Speed of Convergence** | Fast (O(n²)), but can have oscillations                               | Varies; can be slow due to routing loops and count-to-infinity |\n| **Routing Loops**        | Rare, due to global knowledge                                         | Possible, especially during convergence                        |\n| **Count-to-Infinity**    | Not present                                                           | Common problem                                                 |\n| **Robustness**           | Faulty router only affects its own table                              | Faulty router can propagate errors to others                   |\n| **Malicious Behavior**   | Can advertise incorrect link cost, each router computes its own table | Can advertise fake low-cost paths (black-holing)               |\n| **Routing Table Usage**  | Each router computes its own table, used by self                      | Router’s table used by neighbors                               |\n| **Convergence Nature**   | Fast and loopless                                                     | Slower; can form loops                                         |\n| **Metric Support**       | Supports precise and multiple metrics (e.g. delay, cost)              | Limited metric support                                         |\n| **Multiple Paths**       | Can be modified to support multiple best paths                        | Typically supports only one best path                          |\n| **Efficiency**           | Less frequent updates; better with large topologies                   | More chatter in unstable networks                              |\n","x":1550,"y":960,"width":597,"height":400},
+		{"id":"2f22c096f70d1057","type":"text","text":"### Link State (LS) VS Distance Vector (DV)\n\n| **Aspect**               | **Link State (LS)**                                                   | **Distance Vector (DV)**                                       |\n| ------------------------ | --------------------------------------------------------------------- | -------------------------------------------------------------- |\n| **Message Complexity**   | O(n²) messages sent (each router floods to all others)                | Only exchanges with neighbors; fewer messages                  |\n| **Speed of Convergence** | Fast (O(n²)), but can have oscillations                               | Varies; can be slow due to routing loops and count-to-infinity |\n| **Routing Loops**        | Rare, due to global knowledge                                         | Possible, especially during convergence                        |\n| **Count-to-Infinity**    | Not present                                                           | Common problem                                                 |\n| **Robustness**           | Faulty router only affects its own table                              | Faulty router can propagate errors to others                   |\n| **Malicious Behavior**   | Can advertise incorrect link cost, each router computes its own table | Can advertise fake low-cost paths (black-holing)               |\n| **Routing Table Usage**  | Each router computes its own table, used by self                      | Router’s table used by neighbors                               |\n| **Convergence Nature**   | Fast and loopless                                                     | Slower; can form loops                                         |\n| **Metric Support**       | Supports precise and multiple metrics (e.g. delay, cost)              | Limited metric support                                         |\n| **Multiple Paths**       | Can be modified to support multiple best paths                        | Typically supports only one best path                          |\n| **Efficiency**           | Less frequent updates; better with large topologies                   | More chatter in unstable networks                              |\n","x":1800,"y":960,"width":347,"height":120},
 		{"id":"c3b5f2cb812e049c","type":"text","text":"Intra ISP routing: OSPF","x":584,"y":360,"width":250,"height":60},
 		{"id":"2c3c8a060c1f5fe3","type":"text","text":"Inter ISP routing: BGP","x":920,"y":360,"width":250,"height":60},
 		{"id":"493d6a1b1805da05","type":"file","file":"Computer Networks/Network/Inter-ISP Routing BGP.md","x":899,"y":548,"width":271,"height":92},
 		{"id":"9a37157fe1d750d1","type":"file","file":"Computer Networks/Network/Intra-ISP Routing OSPF.md","x":550,"y":548,"width":267,"height":92},
-		{"id":"fe9dce15b98a6d03","type":"text","text":"Error Detection ","x":195,"y":-570,"width":250,"height":60}
+		{"id":"fe9dce15b98a6d03","type":"text","text":"Error Detection ","x":195,"y":-570,"width":250,"height":60},
+		{"id":"36f311c141cd493d","type":"text","text":"CRC Error Detection","x":200,"y":-680,"width":250,"height":60},
+		{"id":"9dfe855f618c5984","type":"file","file":"Computer Networks/Network/Router Anatomy.md","x":628,"y":-340,"width":277,"height":60},
+		{"id":"0bb3be54ee97262c","type":"text","text":"Taking Turns Protocol","x":980,"y":-505,"width":250,"height":50},
+		{"id":"7e788b27b41ae0ba","type":"file","file":"Computer Networks/Link/CSMA (Carrier Sense Multiple Access).md","x":1920,"y":-636,"width":260,"height":84},
+		{"id":"11a394f18777e8b0","type":"file","file":"Computer Networks/Link/Ethernet.md","x":1920,"y":-765,"width":260,"height":70},
+		{"id":"46dc7a789759ce71","type":"file","file":"Computer Networks/Link/Taking Turns.md","x":1008,"y":-412,"width":254,"height":72},
+		{"id":"4e908dcf67d2ddb0","type":"file","file":"Computer Networks/Link/LANs.md","x":-186,"y":-860,"width":151,"height":87}
 	],
 	"edges":[
 		{"id":"0d615c1b826b9640","fromNode":"3299805cad981252","fromSide":"bottom","toNode":"e502407f4c804843","toSide":"top"},
@@ -155,6 +161,12 @@
 		{"id":"c0aafa0add4c2e6e","fromNode":"4c6abd8f1cb6843b","fromSide":"bottom","toNode":"2c3c8a060c1f5fe3","toSide":"top"},
 		{"id":"dd3dce1c29516f22","fromNode":"c3b5f2cb812e049c","fromSide":"bottom","toNode":"9a37157fe1d750d1","toSide":"top"},
 		{"id":"93789d4994f7226e","fromNode":"2c3c8a060c1f5fe3","fromSide":"bottom","toNode":"493d6a1b1805da05","toSide":"top"},
-		{"id":"3e0ff3395351f882","fromNode":"7756a158abb6fa1e","fromSide":"top","toNode":"fe9dce15b98a6d03","toSide":"bottom"}
+		{"id":"3e0ff3395351f882","fromNode":"7756a158abb6fa1e","fromSide":"top","toNode":"fe9dce15b98a6d03","toSide":"bottom"},
+		{"id":"36ad1ca2c7567681","fromNode":"fe9dce15b98a6d03","fromSide":"top","toNode":"36f311c141cd493d","toSide":"bottom"},
+		{"id":"2bda812ecdd182e3","fromNode":"a73c54dbaf758178","fromSide":"right","toNode":"0bb3be54ee97262c","toSide":"left"},
+		{"id":"832eb22d7dd566fe","fromNode":"2562028f6f36f19b","fromSide":"right","toNode":"7e788b27b41ae0ba","toSide":"left"},
+		{"id":"a493e693b92ef259","fromNode":"295ea66613795cc2","fromSide":"right","toNode":"7e788b27b41ae0ba","toSide":"left"},
+		{"id":"8eb58a98659dadf0","fromNode":"0bb3be54ee97262c","fromSide":"bottom","toNode":"46dc7a789759ce71","toSide":"top"},
+		{"id":"776eb3c592289d1f","fromNode":"2243a33925bf7bd6","fromSide":"top","toNode":"4e908dcf67d2ddb0","toSide":"bottom"}
 	]
 }
