@@ -44,5 +44,3 @@
 - **Jam Signal**: make sure all other transmitters are aware of collision 10Mbps Ethernet
 - **Bit time**: 0.1 microsecond for 10 Mbps Ethernet
 
-
-

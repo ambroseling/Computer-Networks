@@ -3,7 +3,7 @@
 	- transmit entire frame
 - If channel sensed busy: 
 	- **1 persistent:**  keep sensing till channel becomes idle, then transmit
-	- **p-persistent:**  wait until channel becomes idle, then transmit with probability $p$ and wait a time-slot with probability $(1-p)$
+	- **p-persistent:**  wait **until** channel becomes idle, then transmit with probability $p$ and wait a time-slot with probability $(1-p)$
 	- **non persistent:** relinquish the channel, wait a random time and sense the channel again
 #### Collisions:
 - can still occur with carrier sensing
