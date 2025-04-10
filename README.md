@@ -3,8 +3,7 @@
 This repository provides a structured overview of computer networking concepts organized by layer and key topics.
 
 ### Mindmap
-
-![[Screenshot 2025-04-10 at 5.12.15 PM.png]]
+![Screenshot 2025-04-10 at 5 12 15 PM](https://github.com/user-attachments/assets/ea43b3e0-3223-4bfa-adc8-b4f51d80dfd6)
 
 ## Table of Contents
 1. [Application Layer](#application-layer)
