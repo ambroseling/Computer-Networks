@@ -16,3 +16,14 @@ AIMD (Additive Increase Multiplicative Decrease)
 - **additive increase:** increasing sending rate by 1 maximum segment size every RTT until loss detected
 - **multiplicative decrease:**  cut sending rate in half at each loss event
 
+#### TCP Throughput
+- In terms of segment loss probability $L$, $\text{TCP Throughput} = R_{TCP} = \frac{1.22 \times MSS}{RTT \times \sqrt{L}}$
+- In terms of window size and RTT:  $\text{TCP Throughput} = \frac{3}{4} \frac{W}{RTT}$
+
+![[Screenshot 2025-04-10 at 6.55.01 PM.png]]
+
+
+![[Screenshot 2025-04-10 at 6.55.18 PM.png]]
+
+
+![[TCP-congestion-control.png]]
