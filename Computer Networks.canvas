@@ -80,7 +80,10 @@
 		{"id":"7e788b27b41ae0ba","type":"file","file":"Computer Networks/Link/CSMA (Carrier Sense Multiple Access).md","x":1920,"y":-636,"width":260,"height":84},
 		{"id":"11a394f18777e8b0","type":"file","file":"Computer Networks/Link/Ethernet.md","x":1920,"y":-765,"width":260,"height":70},
 		{"id":"46dc7a789759ce71","type":"file","file":"Computer Networks/Link/Taking Turns.md","x":1008,"y":-412,"width":254,"height":72},
-		{"id":"4e908dcf67d2ddb0","type":"file","file":"Computer Networks/Link/LANs.md","x":-186,"y":-860,"width":151,"height":87}
+		{"id":"4e908dcf67d2ddb0","type":"file","file":"Computer Networks/Link/LANs/Packet Routing.md","x":-411,"y":-880,"width":151,"height":87},
+		{"id":"139aab5d48d319c5","x":-242,"y":-877,"width":202,"height":62,"type":"file","file":"Computer Networks/Link/LANs/Addressing.md"},
+		{"id":"9a9854fcb42a8c01","x":-10,"y":-877,"width":124,"height":62,"type":"file","file":"Computer Networks/Link/LANs/ARP.md"},
+		{"id":"3b751bee0b2daaca","x":140,"y":-907,"width":188,"height":92,"type":"file","file":"Computer Networks/Link/LANs/Switches and Hubs.md"}
 	],
 	"edges":[
 		{"id":"0d615c1b826b9640","fromNode":"3299805cad981252","fromSide":"bottom","toNode":"e502407f4c804843","toSide":"top"},
@@ -167,6 +170,9 @@
 		{"id":"832eb22d7dd566fe","fromNode":"2562028f6f36f19b","fromSide":"right","toNode":"7e788b27b41ae0ba","toSide":"left"},
 		{"id":"a493e693b92ef259","fromNode":"295ea66613795cc2","fromSide":"right","toNode":"7e788b27b41ae0ba","toSide":"left"},
 		{"id":"8eb58a98659dadf0","fromNode":"0bb3be54ee97262c","fromSide":"bottom","toNode":"46dc7a789759ce71","toSide":"top"},
-		{"id":"776eb3c592289d1f","fromNode":"2243a33925bf7bd6","fromSide":"top","toNode":"4e908dcf67d2ddb0","toSide":"bottom"}
+		{"id":"776eb3c592289d1f","fromNode":"2243a33925bf7bd6","fromSide":"top","toNode":"4e908dcf67d2ddb0","toSide":"bottom"},
+		{"id":"c2f191b047904387","fromNode":"2243a33925bf7bd6","fromSide":"top","toNode":"139aab5d48d319c5","toSide":"bottom"},
+		{"id":"a103c1d89b6a5d9c","fromNode":"2243a33925bf7bd6","fromSide":"top","toNode":"9a9854fcb42a8c01","toSide":"bottom"},
+		{"id":"5fbfdc07d65cdf8d","fromNode":"2243a33925bf7bd6","fromSide":"top","toNode":"3b751bee0b2daaca","toSide":"bottom"}
 	]
 }
